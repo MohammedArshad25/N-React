@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.shimmer-card {
+    width: 300px;
+    height: 400px;
+    padding: 0 10px;
+    margin: 20px 10px;
+    background-color: #f0f0f0;
+}
+
+
+.body-wrapper a{
+       text-decoration: none !important;
+       color: black !important;
+}
+
+
+.user-wrapper {
+    border : 1px solid black;
+    padding : 24px;
+}
+
+
+.menu-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    padding: 12px;
+}
+
+.menu-list-wrapper {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-list-item-wrapper {
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    padding: 12px;
+    align-items: center;
+}
+
+.menu-list-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.menu-list-item-title {
+    font-weight: bold;
+}
+
+.menu-category-title {
+    margin-top: 12px;
+}
+
+.menu-category-wrapper {
+    background-color: rgb(221, 236, 244);
+    margin: 24px;
+    border-radius: 20px;
+}
+
+.img-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin-top: 20px ;
+    right: -32px;
+
+}
+
+.menu-category-head {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.add-item-btn, .clear-cart-btn {
+    width: 20%;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
