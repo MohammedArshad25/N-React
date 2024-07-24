@@ -49,11 +49,12 @@
 
 // event listeners
 
-let sarf = {
-    company: AbortSignal,
-    age:25
-}
-console.log(sarf.age)
-const { company,age}= sarf;
-//arguments keyword
-console.log(age)
+// let sarf = {
+//     company: AbortSignal,
+//     age:25
+// }
+// console.log(sarf.age)
+// const { company,age}= sarf;
+// //arguments keyword
+// console.log(age)
+

@@ -1,0 +1,126 @@
+<!doctype html>
+    <html>
+    <head>
+        <title>The jQuery Example</title>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    // $( ".great-grand-parent" ).children().css( "border", "2px solid red" );
+
+                    //parent()
+                    // $(".parent").parent().css( "border", "2px solid red" );
+
+                    // $("li").parent().css( "border", "2px solid red" );
+
+                    //parents
+                    // $("li").parents().css( "border", "2px solid red" );
+
+                    //parents("div")
+                    // $("li").parents(".great-grand-parent").css( "border", "2px solid red" );
+
+                    //parentsUntil()
+                    // $("li").parentsUntil("div").css( "border", "2px solid red" );
+
+                    //DOWNWARDS TRAVERSING
+                    // $("ul").children().css( "border", "2px solid red" );
+
+
+                    // $("ul").children(".child-one").css( "border", "2px solid red" );
+
+
+
+                    //SIBLINGS
+
+                    // $(".child-three").siblings().css( "border", "2px solid red" );
+
+                    // $("li.child-one").next().css( "border", "2px solid red" );
+
+                    // $("li.child-one").nextAll().css( "border", "2px solid red" );
+
+                    // $("li.child-one").nextUntil(".child-fourr").css( "border", "2px solid red" );
+
+                    // $("li.child-two").prev().css( "border", "2px solid red" );
+
+                    // $("li.child-fourr").prevAll().css( "border", "2px solid red" );
+
+                    // $("li.child-fourr").prevUntil(".child-one").css( "border", "2px solid red" );
+
+
+                    //FILTERING METHODS
+                    // $("ul").find(".child-one, .child-four").css( "border", "2px solid red" );
+
+                    //children traverses only one level find traveres multiple elemnents
+                    // $(".great-grand-parent").find("div").css( "border", "2px solid red" );
+                    // $(".great-grand-parent").children("div").css( "border", "2px solid red" );
+
+                    //EQ
+                    //The eq() method of jQuery filters the set of matched
+                    // elements and returns only one element with the specified index number.
+
+                    // $("ul li").eq(2).css( "border", "2px solid red" );
+
+                    //filter we can give a condition
+                    // $("ul li").filter(":even").css( "border", "2px solid red" );
+
+                    // The has() method of jQuery filters the set of matched elements
+                    //  and returns only those that have the specified descendant element.
+
+                    // $("ul").has("div").css( "border", "2px solid red" );
+
+                    //not()
+                    // $("ul li").not(":even").css( "border", "2px solid red" );
+
+                    //slice
+                    // $("ul li").slice(0,5).css( "border", "2px solid red" );
+
+                    //css selectors
+                    //  $("ul li.child-fourr").slice(0,5).css( "border", "2px solid red" );
+
+
+
+
+
+
+
+
+
+
+
+
+                });
+            });
+        </script>
+        <style>
+            .great-grand-parent *{
+                display:block;
+                border:2px solid #aaa;
+                color:#aaa;
+                padding:5px;
+                margin:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="great-grand-parent">
+            <div class="grand-parent" style="width:500px;">
+                <ul class="parent">
+                <li class="child-one">Child One</li>
+                <li class="child-two">Child Two</li>
+                <li class="child-three">Child three</li>
+                <li class="child-fourr">Child fourr</li>
+                </ul>
+            </div>
+            <div class="grand-parent" style="width:500px;">
+                <ul class="parent">
+                <li class="child-three">Child Three</li>
+                <li class="child-four">Child Four</li>
+                <div class="inside-div">this is a div inside</div>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+        <button>Mark Children</button>
+    </body>
+</html>
