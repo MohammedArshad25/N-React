@@ -6,26 +6,37 @@
         <script>
             $(document).ready(function(){
                 $("button").click(function(){
+                    //by classname
+                    // $( ".great-grand-parent" ).css( "border", "2px solid red" );
+
+                    // by Id
+                    // $( "#unique" ).css( "border", "2px solid red" );
+
+                    //by tagname all matching uls will be selected
+                    // $( "ul" ).css( "border", "2px solid red" );
+
+                    //by classname and children()
                     // $( ".great-grand-parent" ).children().css( "border", "2px solid red" );
 
                     //parent()
                     // $(".parent").parent().css( "border", "2px solid red" );
+
+                    // chaining
+                    // $(".parent").parent().parent().css( "border", "2px solid red" );
 
                     // $("li").parent().css( "border", "2px solid red" );
 
                     //parents
                     // $("li").parents().css( "border", "2px solid red" );
 
-                    //parents("div")
+                    //parents(".classname")
                     // $("li").parents(".great-grand-parent").css( "border", "2px solid red" );
 
                     //parentsUntil()
-                    // $("li").parentsUntil("div").css( "border", "2px solid red" );
+                    // $("li").parentsUntil(".great-grand-parents").css( "border", "2px solid red" );
 
                     //DOWNWARDS TRAVERSING
                     // $("ul").children().css( "border", "2px solid red" );
-
-
                     // $("ul").children(".child-one").css( "border", "2px solid red" );
 
 
@@ -75,19 +86,55 @@
                     // $("ul li").slice(0,5).css( "border", "2px solid red" );
 
                     //css selectors
-                    //  $("ul li.child-fourr").slice(0,5).css( "border", "2px solid red" );
+                    //  $("ul li.child-fourr").css( "border", "2px solid red" );
 
 
+                    function highlightList (list) {
+                        if( list.length > 0 ) {
+                            for (let elem of list) {
+                            elem.classList.add("red");
+                            }
+                        } else {
+                            list.classList.add("red");
+                        }
+                    }
+
+                    //Javascript DOM Traversing
+                    // Selecting getElementById:
+                    // let list = document.getElementById("unique");
+                    // highlightList (list)
+
+                    //getElementsByTagName
+                    // let list = document.getElementsByTagName("li");
+                    // highlightList (list)
+
+                    //QUERY SELECTOR AND QUERY SELECTOR ALL
+                    // const ulElement = document.querySelector("ul");
+                    // highlightList(ulElement)
+
+                    // const ulElement = document.querySelectorAll("ul");
+                    //  highlightList(ulElement);
+
+                    //parent
+                    // const firstli = document.querySelector(".child-one");
+                    // highlightList(firstli.parentElement);
+
+                    //closest will go multiple levels
+                    // const firstli = document.querySelector(".child-one");
+                    // highlightList(firstli.closest("div"));
 
 
+                    //nextSibling
+                    // const firstli = document.querySelector(".child-one");
+                    // highlightList(firstli.nextElementSibling);
 
+                    //previousSibling
+                    // const lastLi = document.querySelector(".child-fourr");
+                    // highlightList(lastLi.previousElementSibling);
 
-
-
-
-
-
-
+                    //combining parent, and children
+                    // const lastLi = document.querySelector(".child-fourr");
+                    // highlightList(lastLi.parentElement.children[1]);
                 });
             });
         </script>
@@ -99,15 +146,19 @@
                 padding:5px;
                 margin:5px;
             }
+
+            .red {
+                border-color: red;
+            }
         </style>
     </head>
     <body>
         <div class="great-grand-parent">
             <div class="grand-parent" style="width:500px;">
                 <ul class="parent">
-                <li class="child-one">Child One</li>
+                <li class="child-one" id="unique">Child One</li>
                 <li class="child-two">Child Two</li>
-                <li class="child-three">Child three</li>
+                <li class="child-threee">Child threee</li>
                 <li class="child-fourr">Child fourr</li>
                 </ul>
             </div>
