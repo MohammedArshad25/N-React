@@ -8,7 +8,7 @@ const UseRefHook = () => {
 
     const InputRef = useRef();
 
-    console.log(InputRef.current.focus( ));
+    // console.log(InputRef.current.focus());
 
 
 

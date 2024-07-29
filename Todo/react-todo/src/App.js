@@ -1,17 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import Todo from "./Todo";
-import UsememoHook from './UseMemoHook';
-import UseRefHook from './UseRefHook';
 
-function App() {
+import AppContext from "./utils/AppContext";
+import { useState , useEffect} from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import './App.css';
+
+
+
+const App = () => {
+
+
+
+const [uName, setUName] = useState("default");
+
+useEffect(()=> {
+  setUName("arshad")
+}, []);
+
   return (
-    <div className="App">
-      <Todo />
-      <UsememoHook />
-      <UseRefHook />
-     </div>
-  );
+    <>
+    <AppContext.Provider value={{userName: uName, setUName}}>
+        <Header />
+        <Outlet/>
+
+    </AppContext.Provider>
+
+    </>
+  )
 }
 
 export default App;
